@@ -1,7 +1,8 @@
+package asteege;
 import java.net.URL;
 import javax.json.*;
 
-public class AlbumReader
+public class AlbumReaderConsole
 {
 	public static void main(String[] args) throws Exception
 	{
