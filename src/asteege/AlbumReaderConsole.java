@@ -6,6 +6,7 @@ public class AlbumReaderConsole
 {
 	public static void main(String[] args) throws Exception
 	{
+		AlbumReader albumReader = new AlbumReader();
 		try
 		{
 			URL url = new URL("https://jsonplaceholder.typicode.com/photos?albumId=" + args[0]);
@@ -17,9 +18,8 @@ public class AlbumReaderConsole
 			{
 				JsonObject photo = array.getJsonObject(i);
 
-				String title = photo.getString("title");
 				int id = photo.getInt("id");
-				System.out.println("[" + id + "] " + title);
+				System.out.println("[" + id + "] " + albumReader.getTitle(photo));
 			}
 		}
 		catch (IndexOutOfBoundsException e)

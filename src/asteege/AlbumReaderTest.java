@@ -20,5 +20,4 @@ public class AlbumReaderTest {
 		String title = reader.getTitle( photo );
 		assertEquals("TEST", title);
 	}
-
 }
