@@ -1,11 +1,11 @@
-## Build
+** Build **
 
 To build this project download and import into eclipse using the build.xml file, 
 im sure there is another way to build it, but that is currently the easiest.
 
 Use the built in tools to run the Junit test and the console 
 
-## future work
+** future work **
 
 Much more of the code in the console really belongs in the reader class with tests around it. I would continue to pull in all of 
 code that reads the online json file if I were to work on this further.
