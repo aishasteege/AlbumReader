@@ -8,5 +8,7 @@ public class AlbumReader {
 		return photo.getString("title");
 	}
 
-	
+	public String getId(JsonObject photo) {
+		return "[" + photo.getString("id") + "] ";
+	}
 }

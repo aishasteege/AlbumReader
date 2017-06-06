@@ -18,8 +18,7 @@ public class AlbumReaderConsole
 			{
 				JsonObject photo = array.getJsonObject(i);
 
-				int id = photo.getInt("id");
-				System.out.println("[" + id + "] " + albumReader.getTitle(photo));
+				System.out.println(albumReader.getTitle(photo) + albumReader.getTitle(photo));
 			}
 		}
 		catch (IndexOutOfBoundsException e)

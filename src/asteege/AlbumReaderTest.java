@@ -12,12 +12,24 @@ public class AlbumReaderTest {
 	@Test
 	public void GetTitleReturnsTitleInJsonPhoto() {
 		AlbumReader reader = new AlbumReader();
-		JsonReader jsonReader = Json.createReader(new StringReader(
-				"{\"albumId\":\"1\",\"id\":\"1\",\"title\":\"TEST\"}"));
+		JsonReader jsonReader = Json
+				.createReader(new StringReader("{\"albumId\":\"1\",\"id\":\"1\",\"title\":\"TEST\"}"));
 		JsonObject photo = jsonReader.readObject();
 		jsonReader.close();
-	    
-		String title = reader.getTitle( photo );
+
+		String title = reader.getTitle(photo);
 		assertEquals("TEST", title);
+	}
+
+	@Test
+	public void GetIdReturnsFormattedIdFromJsonPhoto() {
+		AlbumReader reader = new AlbumReader();
+		JsonReader jsonReader = Json
+				.createReader(new StringReader("{\"albumId\":\"1\",\"id\":\"1\",\"title\":\"TEST\"}"));
+		JsonObject photo = jsonReader.readObject();
+		jsonReader.close();
+
+		String id = reader.getId(photo);
+		assertEquals("[1] ", id);
 	}
 }
